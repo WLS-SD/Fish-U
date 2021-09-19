@@ -24,5 +24,6 @@ cd ..
 
 cd core
 chmod +x *
+cp fish-u.sh $HOME
 
 
