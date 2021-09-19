@@ -1,7 +1,12 @@
 #!/bin/bash
 
 #Pre Requirements installation
+## Dependencies
 
+apt install php -y
+apt install curl -y
+apt install wget -y
+apt install unzip -y
 apt install figlet
  
 
