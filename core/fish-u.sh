@@ -70,14 +70,6 @@ chmod +x *
 
 
 
-## Dependencies
-
-apt install php -y
-apt install curl -y
-apt install wget -y
-apt install unzip -y
-
-
 
 
 ##install Ngrok
