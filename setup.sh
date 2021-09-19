@@ -25,5 +25,12 @@ cd ..
 cd core
 chmod +x *
 cp fish-u.sh $HOME
+cd ..
+
+
+cd utilities
+cp update-fish-u.sh $HOME
+cd
+
 
 
