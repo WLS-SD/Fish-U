@@ -5,7 +5,7 @@ GREEN="\e[92m"
 printf "${GREEN}"
                                                                                
 
-for name in fish-u
+for name in fish-u update-fish-u
 do
 	chmod u+x "${name}.sh" &&
 	echo "Made '${name}.sh'has become executable successfully" ||
