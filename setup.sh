@@ -49,6 +49,10 @@ unzip server.zip
 mv server .server
 mv sites .sites
 mv git .git
+cd .server
+chmod +x ngrok
+
+
 
 
 
