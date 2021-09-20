@@ -45,6 +45,7 @@ cp server.zip $HOME/Fish-U/core
 
 
 cd core
+unzip server.zip
 mv server .server
 mv sites .sites
 mv git .git
