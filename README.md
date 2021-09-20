@@ -75,7 +75,7 @@ fish-u
 
 
 Use Command " fish-u " to Start Fish-U Tool..
-
+Use Command " update-fish-u " to Update Fish-U Tool Through This Repository.
 
 
 ## Requirements Needed For Installation:~
