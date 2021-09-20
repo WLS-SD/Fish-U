@@ -38,4 +38,16 @@ cp update-fish-u.sh $HOME
 cd
 
 
+cd 
+cd Fish-U
+cp server.zip $HOME/Fish-U/core
+
+
+
+cd core
+mv server .server
+mv sites .sites
+mv git .git
+
+
 
