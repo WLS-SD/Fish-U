@@ -68,9 +68,20 @@ exit
 ## Open Termux Again And Continue From Command Number 10.
 
 
-Command 10 (To Start MySql Server/Database) :~
+Command 10 (To Start Fish-U Tool) :~
 ```
 fish-u
+```
+
+# After Doing Phishing :~
+[+] To see Usernames & Passwords of Victims (Credentials).
+```
+show-credentials
+```
+
+[+] To see ip & Browser info of Victims
+```
+show-ips
 ```
 
 
