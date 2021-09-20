@@ -40,7 +40,7 @@ printf "${LightCyan}"
 
 
 
-echo "This Tool is Made by 'https://github.com/WLS-SD' Under GNU GENERAL PUBLIC LICENSE Version 3."
+echo "This Tool is Made by 'https://github.com/WLS-SD' Under GNU GENERAL PUBLIC LICENSE Version 3.0."
  
 
 
