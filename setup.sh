@@ -63,3 +63,37 @@ chmod +x *
 cp show-ips.sh $HOME
 cp show-credentials.sh $HOME
 
+
+
+#Spinner
+Green="\e[92m"
+printf "${Green}"
+
+
+spinner=( 'Fish-U' 'WLS-SD');
+
+#spinner=( '|' '/' '-' '\' );
+
+count(){
+  spin &
+  pid=$!
+  for i in `seq 1 6`
+
+  do
+    sleep 0.6;
+  done
+
+  kill $pid
+}
+
+spin(){
+  while [ 1 ]
+  do
+    for i in ${spinner[@]};
+    do
+      echo -ne "\r$i";
+      sleep 0.6;
+    done;
+  done
+}
+count
