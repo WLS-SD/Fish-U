@@ -5,7 +5,7 @@
 
 
 
-This Tool is Developed & Maintained by https://github.com/WLS-SD under GNU GENERAL PUBLIC LICENSE Version 3.
+This Tool is Developed & Maintained by https://github.com/WLS-SD under GNU GENERAL PUBLIC LICENSE Version 3.0.
 
   
 Note:
