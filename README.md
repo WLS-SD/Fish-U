@@ -85,6 +85,6 @@ fish-u
 ### NOTE:~ if you face any problems / errors then please inform me...i will try to solve / tackle it ....
 
 ### NOTE:~
-This Tool Works in Almost All Version of Android.
-This tool is tested in Android 6 , Android 7 (Nougat) , Android 8 (Oreo) , Android 9 &  Android 10(Q).
+# This Tool Works in Almost All Version of Android.
+# This tool is tested in Android 6 , Android 7 (Nougat) , Android 8 (Oreo) , Android 9 &  Android 10(Q).
 
